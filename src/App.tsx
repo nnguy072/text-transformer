@@ -1,14 +1,17 @@
 import React from 'react';
 import './scss/App.scss';
-import TopBar from './components/topbar';
-import Body from './components/body';
+import SideNav from './components/navigation/sideNav';
+import Container from 'react-bootstrap/Container';
+import Content from './components/content';
 
 class App extends React.Component {
-  render() {
+  render(): JSX.Element {
     return (
-      <div className="App">
-        <TopBar></TopBar>
-        <Body></Body>
+      <div className="app">
+        <SideNav />
+        <Container fluid>
+          <Content></Content>
+        </Container>
       </div>
     );
   }
